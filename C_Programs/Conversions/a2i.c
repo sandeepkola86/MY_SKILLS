@@ -1,26 +1,15 @@
-#include <stdio.h>
-#include <string.h>
-
-int a2i(char*);
-
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 int main()
+{ 
+char  *str="abcd 123%@",i;
+for(i=0;i<strlen(str);i++)
 {
-    char string[5];
-    printf("Enter a string value: ");
-    scanf("%s", string);
-    printf("\nInteger value = %d\n", a2i(string));
-
-    return 0;
+   int integer =str[i]-0;
+  printf("%d\t",integer);         
 }
-
-int a2i(char* txt)
-{
-    int sum, digit, i;
-    sum = 0;
-    for (i = 0; i < strlen(txt); i++) {
-        digit = txt[i] - 0x30;
-        sum = (sum * 10) + digit;
-    }
-    return sum;
+ 
+    return 0;
 }
 
